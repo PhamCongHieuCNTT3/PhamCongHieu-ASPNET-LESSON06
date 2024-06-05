@@ -1,0 +1,74 @@
+﻿@model Lesson06___Entity_framework.Models.PchBook
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PchBook</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PchBookId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PchBookId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PchTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PchTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PchAuthor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PchAuthor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PchYear)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PchYear)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PchPulisher)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PchPulisher)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PchPicture)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PchPicture)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PchCategoryId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PchCategoryId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PchId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

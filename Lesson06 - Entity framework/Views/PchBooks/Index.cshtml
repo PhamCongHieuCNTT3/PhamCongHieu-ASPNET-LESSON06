@@ -1,0 +1,69 @@
+﻿@model IEnumerable<Lesson06___Entity_framework.Models.PchBook>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PchBookId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PchTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PchAuthor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PchYear)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PchPulisher)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PchPicture)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PchCategoryId)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PchBookId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PchTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PchAuthor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PchYear)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PchPulisher)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PchPicture)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PchCategoryId)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PchId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PchId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PchId })
+        </td>
+    </tr>
+}
+
+</table>

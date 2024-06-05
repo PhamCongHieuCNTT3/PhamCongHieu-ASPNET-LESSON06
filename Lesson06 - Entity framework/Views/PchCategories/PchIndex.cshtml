@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Lesson06___Entity_framework.Models.PchCategory>
+
+@{
+    ViewBag.Title = "PchIndex";
+}
+
+<h2>PchIndex</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PchCategoryName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PchCategoryName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PchId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PchId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PchId })
+        </td>
+    </tr>
+}
+
+</table>
